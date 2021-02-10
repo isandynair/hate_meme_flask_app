@@ -18,7 +18,9 @@ from PIL import Image
 import torch                    
 import torchvision
 import pytorch_lightning as pl
+
 from utils.hparams import hparams
+from utils.download_trained_model import download_model
 
 from flask import Flask, render_template, request, flash, redirect
 #from flask_uploads import UploadSet, configure_uploads,IMAGES
@@ -36,6 +38,9 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 app = Flask(__name__)
 UPLOAD_FOLDER = "static"
+
+download_model("https://drive.google.com/uc?id=1DVzv2LUgKeT9ZmQSdDwQ2SmoVK8N6ra8")
+
 
 def load_model(model_path):
 
@@ -113,10 +118,10 @@ def landing_page():
         
     return render_template("index.html")
 
+concat_meme_model = load_model(model_path = "./model/meme_model.pt")
+text_transform, image_transform = load_callable_encoders()
+
 
 if __name__ == '__main__':
 
-    concat_meme_model = load_model(model_path = "./model/meme_model.pt")
-    text_transform, image_transform = load_callable_encoders()
-
-    app.run(port=13000, debug=True, host="0.0.0.0")
+    app.run(port=5000, debug=True, host="0.0.0.0")

@@ -1,12 +1,14 @@
 import gdown
 import os
 
-url = 'https://drive.google.com/uc?id=1DVzv2LUgKeT9ZmQSdDwQ2SmoVK8N6ra8'
+def download_model(path):
 
-if not 'model' in os.listdir('.'):
-    os.makedirs('model', exist_ok=True)
+    url = path
 
-output = './model/meme_model.pt'
-gdown.download(url, output, quiet=False)
+    if not 'model' in os.listdir('.'):
+        os.makedirs('model', exist_ok=True)
 
-print('Downloading trained model completed!!')
+        output = './model/meme_model.pt'
+        gdown.download(url, output, quiet=False)
+
+    return 'Downloading trained model completed!!'

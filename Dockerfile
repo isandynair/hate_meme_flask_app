@@ -8,7 +8,7 @@ RUN pip install --upgrade pip && \
 
 COPY . .
 
-RUN ["python", "./utils/download_trained_model.py"]
+#RUN ["python", "./utils/download_trained_model.py"]
 
 EXPOSE 5000
  
