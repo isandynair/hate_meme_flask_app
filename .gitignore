@@ -3,3 +3,4 @@ analytics_main
 model
 **/__pycache__
 test*
+.deployment

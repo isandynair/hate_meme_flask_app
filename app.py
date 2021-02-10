@@ -10,8 +10,8 @@ import warnings
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
-import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
+#import ssl
+#ssl._create_default_https_context = ssl._create_unverified_context
 
 from sentence_transformers import SentenceTransformer
 from PIL import Image
@@ -33,7 +33,7 @@ except:
     sys.path.append("utils")
     from utils.model import HatefulMemesModel
 
-os.environ["TOKENIZERS_PARALLELISM"] = "false"
+#os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 
 app = Flask(__name__)
@@ -124,4 +124,4 @@ text_transform, image_transform = load_callable_encoders()
 
 if __name__ == '__main__':
 
-    app.run(port=5000, debug=True, host="0.0.0.0")
+    app.run(debug=True)
