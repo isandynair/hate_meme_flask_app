@@ -24,7 +24,7 @@ pip install -r requirements.txt
 ```
 flask run
 ```
-##### ***Note: Running `flask app` will automatically download the trained model from [this](https://drive.google.com/file/d/1DVzv2LUgKeT9ZmQSdDwQ2SmoVK8N6ra8/view?usp=sharing) link to newly created `./model` directory!***
+##### ***Note: Running `flask run` will automatically download the trained model from [this](https://drive.google.com/file/d/1DVzv2LUgKeT9ZmQSdDwQ2SmoVK8N6ra8/view?usp=sharing) link to newly created `./model` directory!***
 
 <br />
 
