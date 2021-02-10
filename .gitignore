@@ -1,0 +1,5 @@
+.vscode
+analytics_main
+model
+**/__pycache__
+test*

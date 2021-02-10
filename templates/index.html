@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        input {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>HateMeme Web App</title>
+</head>
+
+<body style="background-color:Beige;">
+    <h1>HateMeme Web App</h1>
+    <form method=post enctype=multipart/form-data>
+        <div style="margin-top:15px;">
+            <p>
+            <h4><span style="color:black"> Upload Meme </span></h4>
+            </p>
+        </div>
+        <div>
+            <p>
+                <input type=file name=meme_image onchange="loadFile(event)">
+            </p>
+            <p><img id="display_img" height="200" width="300" /></p>
+        </div>
+        <div>
+            <p>
+                <label>Meme Text</label>
+                <input type=text name=text_input>
+            </p>
+        </div>
+        <div>
+            <p>
+                <input type=submit value=Predict>
+            </p>
+
+            <h4>Prediction: {{meme_tox}}</h4>
+
+            <h4>Meme Hatefulness Probability: {{probability}}</h4>
+
+        </div>
+    </form>
+
+    <script src="../static/display_image.js"></script>
+</body>
+
+</html>
