@@ -32,4 +32,4 @@ jobs:
       with:
         app-name: 'hatememewebapp'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_8585da32f8ea4e4f96aba6bfc2b8b459 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_8f4131dc72404cdf818242afb59b8d7a }}
